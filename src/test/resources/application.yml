@@ -1,0 +1,9 @@
+spring:
+  flyway:
+    url: jdbc:mysql://localhost:3306?useSSL=false
+    user: root
+    password: 1qw2!QW@
+    baseline-on-migrate: true
+    validate-on-migrate: false
+    create-schemas: true
+    schemas: once

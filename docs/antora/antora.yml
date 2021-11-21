@@ -1,5 +1,5 @@
-name: peacetrue-template-gradle
-title: gradle 模板项目
+name: peacetrue-flyway-reactive
+title: Reactive Flyway
 version: master
 asciidoc:
   attributes:

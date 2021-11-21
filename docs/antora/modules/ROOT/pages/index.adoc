@@ -1,17 +1,7 @@
 = 简介
 
-peacetrue-template-gradle 是一个基于 gradle 的 xref:github-template.adoc[github 模板项目]。
+see https://stackoverflow.com/questions/59553647/how-to-run-flyway-migration-for-reactive-r2dbc-driver-on-sprintboot-stratup[how to run flyway migration for reactive r2dbc driver on sprintboot stratup]
 
-包含以下内容：
+正常情况下，项目依赖 `org.springframework:spring-jdbc`，`FlywayAutoConfiguration` 能够成功初始化。
 
-* 基于 jdk8+
-* 使用 gradle-5.6.2
-* build.gradle中包含以下内容：
-** idea 插件，支持在 Intellij IDEA 中开发
-** maven-publish 插件，发布类库到 maven 中央仓库
-** 依赖版本管理
-*** spring-boot-dependencies:1.5.20.RELEASE
-*** peacetrue-dependencies:1.0.4-SNAPSHOT
-* 文档目录 /docs 包含以下内容：
-** ``README.graffle``设计图表
-** 一个符合 https://antora.org[antora^] 要求的文档结构
+在 Reactive 环境下，项目依赖 `org.springframework.boot:spring-boot-starter-data-r2dbc` 而不依赖 `org.springframework:spring-jdbc`，此时 `FlywayAutoConfiguration` 初始化异常，提示 `Caused by: java.lang.ClassNotFoundException: org.springframework.jdbc.core.ConnectionCallback`。

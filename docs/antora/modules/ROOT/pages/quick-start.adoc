@@ -1,0 +1,31 @@
+= 快速入门
+
+== 引入依赖
+
+[source%nowrap,meavn]
+----
+<dependency>
+    <groupId>com.github.peacetrue</groupId>
+    <artifactId>peacetrue-flyway-reactive</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+</dependency>
+----
+
+== 配置 Flyway
+
+[source%nowrap,yaml]
+----
+spring:
+  flyway:
+    url: jdbc:mysql://localhost:3306?useSSL=false
+    user: root
+    password: 1qw2!QW@
+    baseline-on-migrate: true
+    validate-on-migrate: false
+    create-schemas: true
+    schemas: once
+----
+
+== 运行效果
+
+image::image-2021-11-21-13-17-30-299.png[]
